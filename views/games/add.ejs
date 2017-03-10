@@ -1,0 +1,37 @@
+<% include ../partials/header.ejs %>
+
+<main class="container">
+
+  <h1>Game Details</h1>
+
+  <form method="post">
+    <div class="form-group">
+      <label for="title" class="col-sm-2 control-label">Title: *</label>
+      <input name="title" id="title" required />
+    </div>
+    <div class="form-group">
+      <label for="category" class="col-sm-2 control-label">Category: *</label>
+      <input name="category" id="category" required />
+    </div>
+    <div class="form-group">
+      <label for="developer" class="col-sm-2 control-label">Developer: *</label>
+      <input name="developer" id="developer" required />
+    </div>
+    <div class="form-group">
+      <label for="genre" class="col-sm-2 control-label">Genre:</label>
+      <select name="genre" id="genre">
+        <option>Openworld</option>
+        <option>RPG</option>
+        <option>Simulation</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="year" class="col-sm-2 control-label">Year:</label>
+      <input name="year" id="year" min="1600" type="number" required />
+    </div>
+    <button class="btn btn-success col-sm-offset-2">Save</button>
+  </form>
+
+</main>
+
+<% include ../partials/footer.ejs %>

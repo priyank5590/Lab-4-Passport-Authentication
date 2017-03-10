@@ -1,0 +1,37 @@
+<% include ../partials/header.ejs %>
+
+<main class="container">
+
+    <h1>Game Details</h1>
+
+    <form method="post">
+        <div class="form-group">
+            <label for="title" class="col-sm-2 control-label">Title: *</label>
+            <input name="title" id="title" required value="<%= game.title %>" />
+        </div>
+         <div class="form-group">
+            <label for="category" class="col-sm-2 control-label">Category: *</label>
+            <input name="category" id="category" required value="<%= game.category %>" />
+        </div>
+        <div class="form-group">
+            <label for="developer" class="col-sm-2 control-label">Developer: *</label>
+            <input name="developer" id="developer" required value="<%= game.developer %>" />
+        </div>
+        <div class="form-group">
+            <label for="genre" class="col-sm-2 control-label">Genre:</label>
+            <select name="genre" id="genre">
+                <option <% if (game.genre == 'Openworld') { %>selected<% }%>>Openworld</option>
+                <option <% if (game.genre == 'RPG') { %>selected<% }%>>RPG</option>
+                <option <% if (game.genre == 'Simulation') { %>selected<% }%>>Simulation</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="year" class="col-sm-2 control-label">Year:</label>
+            <input name="year" id="year" min="1600" type="number" required value="<%= game.year %>"/>
+        </div>
+        <button class="btn btn-success col-sm-offset-2">Save</button>
+    </form>
+
+</main>
+
+<% include ../partials/footer.ejs %>
